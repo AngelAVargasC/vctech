@@ -1,0 +1,355 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family:Arial, Helvetica, sans-serif;
+    /*background-color: #ffffff;*/
+    /* background-image: url('../images/FC1_morado.png'); */
+    background-size: cover; /*Ajusta la imagen para que cubra todo el fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-attachment: fixed; /* Fija la imagen de fondo para que no se mueva con el scroll */
+    background-position: center; /* Centra la imagen de fondo */
+    color: #ffffff;
+}
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.content-wrap {
+    flex: 1;
+}
+
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.navbar {
+    background-color: transparent;
+    /*background-color: #001a29;*/
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand {
+    color: #ffffff;
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
+
+
+.nav-toggle {
+    display: none;
+    background-color: transparent;
+   /* background-color: #001a29;*/
+    color:#0003b9;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+
+.Logo {
+    width: 35vmin;
+}
+
+.footer {
+    background: transparent;
+    /*background-color: #1e1e1e;*/
+    padding: 20px 0;
+    text-align: center;
+    color: #555555;
+    margin-top: 20px;
+}
+
+.footer p {
+    margin: 0;
+    color: #cecece;
+}
+
+.nav-links{
+    display: flex;
+    flex-direction: row;
+}
+
+
+@media (max-width: 600px) {
+    .nav-links {
+        flex-direction: column;
+        max-height: 0;
+        overflow: hidden;
+    }
+
+    .nav-toggle {
+        display: block
+
+    }
+
+    .navbar .container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+}
+
+
+.nav-links li {
+    display: flex;
+    flex-direction: row;
+    position: relative; /* Necesario para la pseudo-clase ::after */
+    padding: 0px;
+}
+
+.nav-links li:hover{
+    
+    box-shadow: none;
+    transform: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    flex-direction: row;
+    color: #0003b9; /* Color del texto */
+    font-weight: 500; /* Peso de la fuente */
+    padding: 10px 20px; /* Espaciado interno */
+    transition: color 0.3s ease, transform 0.3s ease; /* Transiciones suaves */
+    font-size: 1.5vmax;
+    font-family: "Nanum Gothic", sans-serif;
+}
+
+.nav-links a:hover {
+    color: #007BFF; /* Color del texto al pasar el ratón */
+    transform: translateY(-3px); /* Desplaza el enlace hacia arriba */
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px; /* Altura de la línea subrayada */
+    background-color: #007BFF; /* Color de la línea subrayada */
+    transform: scaleX(0); /* Inicia con una escala de 0 */
+    transition: transform 0.3s ease; /* Transición suave */
+}
+
+.nav-links a:hover::after {
+    transform: scaleX(1); /* Escala a 1 al pasar el ratón */
+}
+
+
+.cont_prin{
+
+    margin: 10px 10px 10px 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: transparent;
+    gap: 10px;
+    height: 50rem;
+}
+
+@media (max-width: 600px) {
+    
+
+    .cont_prin_sec2{
+        
+        display: grid;
+        grid-row: auto;
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+        width: 100%;
+        border: solid 1px black;
+    }
+    
+    .cont_prin{
+
+        margin: 10px 10px 10px 10px;
+        display: grid;
+        grid-template-columns: 1fr;
+        background-color: transparent;
+        gap: 10px;
+        height: 50rem;
+    }
+    
+    
+    .page-container {
+        grid-template-columns: 1fr; /* Todo en una sola columna */
+
+    }
+
+    .cont_prin_sec1{
+        display: grid;
+        border: solid 1px black;
+    
+        
+    }
+    .cont_prin_sec6{
+
+        border: solid 1px black;   
+    
+    }
+}
+
+/*Estilos de contenido Pincipal seccion 1*/
+.cont_prin_sec1{
+    display: grid;
+    grid-column: span 2;
+    border: solid 1px black;
+    grid-template-columns: 1fr;
+
+    
+
+}
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+
+
+}
+.cont_prin_sec1_slogan {
+    display: grid;
+    margin: 10px 10px 0px;
+           /*Top side buttom*/
+    color: #3b00df;
+    border: solid 1px black;
+    font-weight: bold;
+    overflow: hidden; /* Oculta el desbordamiento */
+}
+.animated-text {
+    margin: 20px;
+    display: flex;
+    text-shadow: 4px 0px 2px rgba(113, 103, 255, 0.411); /* Sombra negra con un poco de desenfoque */
+    overflow: hidden; /* Oculta el texto que no ha sido mostrado */
+    font-size: 10vmin;
+    /*animation: typing .75s steps(40, end), blink .75s step-end infinite;*/
+    border: solid 1px black;
+    text-align: left;
+    align-items: center;
+}
+
+
+
+.cont_prin_sec1_descrip{
+    margin: 0px 10px 10px;
+    border: solid 1px black;
+    
+}
+
+.cont_prin_sec1_descrip_subt{
+    margin: 10px;
+    display: grid;
+    border: solid 1px black;
+    justify-content: left;
+
+}
+.description_page_title{
+    margin: 0px 10px;
+    font-size: 4.5vmin;
+    border: solid 1px black;
+    color: #3b00df;
+    text-align: center;
+    font-weight: bold;
+}
+
+/*estilo para objetvo de empresa*/
+
+.cont_prin_sec1_descrip_texto{
+
+    display: grid;
+    margin: 30px 10px 0px;
+    border: solid 1px black;
+    justify-content: center;
+  
+
+}
+
+.description_page{
+    margin: 0 10px;
+    font-size: 3.5vmin;
+    border: solid 1px black;
+    color: #3b00df;
+    text-align: left;
+}
+
+
+.cont_prin_sec2{
+    
+    
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    width: 100%;
+    border: solid 1px black;
+}
+
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Hace que el video cubra todo el div, manteniendo su aspecto */
+    border: solid 1px black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.cont_prin_sec3{
+
+    border: solid 1px black;
+
+}
+
+.cont_prin_sec4{
+
+    border: solid 1px black;
+
+}
+
+.cont_prin_sec5{
+
+    border: solid 1px black;
+
+}
+
+.cont_prin_sec6{
+
+    grid-column: span 3;
+    border: solid 1px black;   
+
+}

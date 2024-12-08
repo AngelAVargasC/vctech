@@ -1,0 +1,306 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    /* font-family: "Nanum Gothic", sans-serif; */
+    /* background-image: url('../images/Fondo_blanco_2.png'); */
+    background-size: cover; /* Ajusta la imagen para que cubra todo el fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-attachment: fixed; /* Fija la imagen de fondo para que no se mueva con el scroll */
+    background-position: center; /* Centra la imagen de fondo */
+    color: #ffffff;
+}
+.page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.content-wrap {
+    flex: 1;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.navbar {
+    background-color: transparent;
+    /*background-color: #001a29;*/
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand {
+    color: #ffffff;
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
+.nav-toggle {
+    display: none;
+    background-color: transparent;
+    /*background-color: #001a29;*/
+    color:#0003b9;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.main-content {
+    padding-top: 20px;
+}
+
+h1 {
+    
+    text-align: center;
+    color: #0003b9;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-size: 4vmin;
+
+}
+
+.filter {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.filter label {
+    color: #0003b9;
+    font-size: 1.2em;
+}
+
+.filter select {
+    
+    text-align: center;
+    padding: 10px;
+    font-size: 1em;
+    background-color: transparent;
+    color: #0003b9;
+    border: transparent;
+    outline: none;
+    border-radius: 5px;
+
+}
+
+.search {
+    
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #000000;
+}
+
+.search label {
+    
+    text-align: center;
+    font-size: 1.2em;
+    color: #0003b9;
+}
+
+.search input {
+    
+    padding: 10px;
+    font-size: 1em;
+    background-color: #0018ec38;
+    color: #000000;
+    border: solid transparent;
+    outline: none;
+    border-radius: 10px;    
+   
+   
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+li {
+    background-color: #d4d4d400;
+    padding: 20px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    text-align: center;
+    min-height: 5px; /* Agregado para asegurarse de que el contenedor tenga un tamaño mínimo */
+    cursor: pointer; /* Cambiar el cursor al pasar sobre un producto */
+}
+
+li:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px #000000;
+}
+
+li img {
+    max-width: 100%;    
+    height: auto;
+    border-radius: 10px;
+    min-height: 200px; /* Tamaño mínimo para las imágenes */
+}
+
+h2 {
+    margin: 10px 0 10px 0;
+    font-size: 1.5em;
+    color: #575757;
+}
+
+p {
+    margin: 5px 0;
+    color: #000000;
+}
+
+.footer {
+    background:transparent;
+    /*background-color: #1e1e1e;*/
+    padding: 20px 0;
+    text-align: center;
+    color: #0400ff;
+    margin-top: 20px;
+}
+
+.footer p {
+    margin: 0;
+    color: #cecece;
+}
+
+@media (max-width: 600px) {
+    .nav-links {
+        flex-direction: column;
+        max-height: 0;
+        overflow:hidden;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    .navbar .container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+}
+
+.Logo {
+    width: 35vmin;
+}
+
+/* Estilos para la ventana emergente */
+.modal {
+    display: none; /* Ocultar por defecto */
+    position: fixed; /* Mantener en la misma posición */
+    z-index: 1; /* Encima de todo el contenido */
+    left: 0;
+    top: 0;
+    width: 100%; /* Completa el ancho */
+    height: 100%; /* Completa el alto */
+    overflow: auto; /* Permitir el desplazamiento si es necesario */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo negro con opacidad */
+
+}
+
+.modal-content {
+    background-color: #ffffff;
+    margin: 10% auto; /* Centrar vertical y horizontalmente */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Puede ajustarse según sea necesario */
+    max-width: 600px;   
+    border-radius: 10px;
+    position: relative;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#modal-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Centra los enlaces en el contenedor */
+    gap: 20px; /* Espaciado entre los enlaces */
+}
+
+.nav-links li {
+    position: relative; /* Necesario para la pseudo-clase ::after */
+    padding: 0px;
+}
+
+.nav-links li:hover{
+    
+    box-shadow: none;
+    transform: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #0003b9; /* Color del texto */
+    font-weight: 500; /* Peso de la fuente */
+    padding: 10px 20px; /* Espaciado interno */
+    transition: color 0.3s ease, transform 0.3s ease; /* Transiciones suaves */
+    font-size: 1.5vmax;
+    font-family: "Nanum Gothic", sans-serif;
+}
+
+.nav-links a:hover {
+    color: #007BFF; /* Color del texto al pasar el ratón */
+    transform: translateY(-3px); /* Desplaza el enlace hacia arriba */
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px; /* Altura de la línea subrayada */
+    background-color: #007BFF; /* Color de la línea subrayada */
+    transform: scaleX(0); /* Inicia con una escala de 0 */
+    transition: transform 0.3s ease; /* Transición suave */
+}
+
+.nav-links a:hover::after {
+    transform: scaleX(1); /* Escala a 1 al pasar el ratón */
+}
+
+
+.fil_and_serch{
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}

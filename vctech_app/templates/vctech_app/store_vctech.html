@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VCTECHmx</title>
+ 
+    <!-- Cargar archivos estáticos -->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'vctech_app/css/styles.css' %}">
+    <script src="{% static 'vctech_app/js/script.js' %}" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Unica+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=Nanum+Gothic&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="page-container">
+        <nav class="navbar">
+            <div class="container">
+                <a href="#" class="brand">
+                    <img class="Logo" src="{% static 'vctech_app/images/New_Fondo_HD_Azul.png' %}" alt="MXTECHvc Logo">
+                </a>
+                
+                <button class="nav-toggle" onclick="toggleNav()">☰</button>
+                <ul class="nav-links">
+                    <li><a href="{% url 'templates/vctech_app/homepage' %}">INICIO</a></li>
+                    <li><a href="#">PRODUCTOS</a></li>
+                    <li><a href="#">CONTACTO</a></li>
+                </ul>
+            </div>
+        </nav>
+        
+        <div class="content-wrap">
+            <div class="container main-content">
+                <h1>Comprar Productos</h1>
+                <div class="fil_and_serch">
+                    <div class="filter">
+                        <label for="filter">Categoria</label>
+                    
+                        <select id="category">
+                            <option value="">Todas</option>
+                            <option value="Laptops">Laptops</option>
+                            <option value="Desktop">Desktop</option>
+                            <option value="Celulares">Celulares</option>
+                        </select>
+                    </div>
+                    <div class="search">
+                        <label for="search">Buscador:</label>
+                        <input type="text" id="search" placeholder="Buscar producto...">
+                    </div>
+                </div>    
+                <ul id="product-list"></ul>
+            </div>
+        </div>
+        
+        <footer class="footer">
+            <div class="container">
+                <p>&copy; 2024 VCTECHmx. Todos los derechos reservados. <br> Pagina Desarrollada por:<a href="#" style="text-decoration: none;"> VCTECHmx</a></p>
+            </div>
+        </footer>
+    </div>
+
+    <div id="product-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img id="modal-image" src="" alt="">
+            <h2 id="modal-title"></h2>
+            <p id="modal-category"></p>
+            <p id="modal-price"></p>
+            <p id="modal-description"></p>
+        </div>
+    </div>
+    
+    <!-- Cargar archivos estáticos -->
+    <script src="{% static 'vctech_app/js/script.js' %}"></script>
+</body>
+</html>

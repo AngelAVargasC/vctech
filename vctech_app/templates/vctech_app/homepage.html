@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VCTECHmx</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'vctech_app/css/styles_hp.css' %}">
+    <script src="{% static 'vctech_app/js/script.js' %}" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Unica+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=Nanum+Gothic&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="page-container">
+        <nav class="navbar">
+            <div class="container">
+                <a href="#" class="brand">
+                    <img class="Logo" src="{% static 'vctech_app/images/New_Fondo_HD_Azul.png' %}" alt="MXTECHvc Logo">
+                </a>
+                <span class="espacio"></span>
+                <button class="nav-toggle" onclick="toggleNav()">☰</button>
+                <ul class="nav-links">
+                
+                    <li><a href="#">DESARROLLOS</a></li>
+                    <li><a href="{% url 'templates/vctech_app/store_vctech' %}">PRODUCTOS</a></li>
+                    <li><a href="#">CONTACTO</a></li>
+                    <li><a href="#">SING IN</a></li>
+                   
+                </ul>
+            </div>
+        </nav>
+        
+        <section class="cont_prin">
+            
+            <div class="cont_prin_sec1">
+
+                <div class="cont_prin_sec1_slogan">
+                  
+                    <span class="animated-text">Transformamos tus <br>necesidades en inspiradoras<br>soluciones.
+                    </span>
+                
+                </div>
+
+                <div class="cont_prin_sec1_descrip">
+                  
+                    
+                    <div class="cont_prin_sec1_descrip_subt">   
+                        
+                        <span class="description_page_title">   
+                            Solo necesitas imaginarlo...  
+                        </span> 
+                    </div>  
+                    
+                    <div class="cont_prin_sec1_descrip_texto">  
+                        <span class="description_page"> 
+                            En <strong>VCTECH</strong>, nuestro principal objetivo es transformar 
+                            las necesidades de nuestros clientes en soluciones tecnológicas eficientes 
+                            y personalizadas. Nos esforzamos por entender profundamente sus desafíos 
+                            para desarrollar e implementar estrategias que impulsen 
+                            su crecimiento y éxito en el entorno digital actual.
+                        </span> 
+                    </div>  
+                    
+                    
+                </div>
+            
+            </div>
+
+            <div class="cont_prin_sec2">
+                <video autoplay muted loop class="video-background" src="{% static 'vctech_app/images/programing.mp4' %}" type="video/mp4"></video>
+
+            </div>
+            <div class="cont_prin_sec3">seccion3</div>
+            <div class="cont_prin_sec4">seccion4</div>
+            <div class="cont_prin_sec5">seccion5</div>
+            <div class="cont_prin_sec6">seccion6</div>
+
+        </section>
+
+
+        
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 VCTECHmx. Todos los derechos reservados. <br> Pagina Desarrollada por:<a href="#" style="text-decoration: none;"> VCTECHmx</a></p>
+        </div>
+    </footer>
+    </div>
+</body>
+</html>
